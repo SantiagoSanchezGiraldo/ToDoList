@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kalam", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --rojo: #ba181b;
+  --azul: #333A73;
+  --azul-hover: #387ADF;
+  --rojo-hover: #e5383b;
+  --verde: #09a129;
+}
+
+body {
+  background-color: #50C4ED;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.cardToDo {
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+  width: 700px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.counterToDos {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.counterToDos h3 {
+  font-weight: 500;
+}
+
+.counterToDos span {
+  color: #333A73;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+ul {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+ul li span {
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+ul li form {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputUpdate {
+  border: none;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 18px;
+  color: #555;
+  width: 100%;
+  outline: none;
+}
+
+.containerDone {
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  border: 2px solid var(--verde);
+  cursor: pointer;
+}
+
+.containerDone.active {
+  background-color: var(--verde);
+}
+
+.text-decoration-dashed {
+  text-decoration: line-through;
+}
+
+.btnDelete {
+  background-color: var(--rojo);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btnDelete:hover {
+  background-color: var(--rojo-hover);
+}
+
+.btnEdit {
+  background-color: var(--azul);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btnEdit:hover {
+  background-color: var(--azul-hover);
+}
+
+form {
+  display: flex;
+  gap: 20px;
+}
+
+.addToDo h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.inputAdd {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  flex: 1;
+  font-family: inherit;
+  font-size: 17px;
+  color: #555;
+}
+
+.btnAdd {
+  border: none;
+  background-color: var(--azul);
+  color: #fff;
+  padding: 5px 40px;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btnAdd:hover {
+  background-color: var(--azul-hover);
+}
