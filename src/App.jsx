@@ -1,40 +1,22 @@
 import { useState } from 'react';
 import './App.css';
-import { TodoAdd } from './components/TodoAdd';
-import { TodoList } from './components/TodoList';
-import { useToDo } from './hooks/useToDo';
+import { Route, Routes } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Calander } from './components/Calander';
+import { Lista } from './components/Lista';
+import { Deafualt } from "./components/Deafualt";
 
 function App() {
-	const {
-		todos,
-		todosCount,
-		pendingTodosCount,
-		handleNewTodo,
-		handleDeleteTodo,
-		handleCompleteTodo,
-		handleUpdateTodo,
-	} = useToDo();
-
 	return (
 		<>
-			<div className='cardToDo'>
-				<h1>Lista de tareas</h1>
-				<div className='counterToDos'>
-					<h3>N° Tareas: <span>{todosCount}</span></h3>
-					<h3>Pendientes: <span>{pendingTodosCount}</span></h3>
-				</div>
-
-				<div className='addToDo'>
-					<h3>Agregar Tarea</h3>
-					<TodoAdd handleNewTodo={handleNewTodo} />
-				</div>
-
-				<TodoList
-					todos={todos}
-					handleUpdateTodo={handleUpdateTodo}
-					handleDeleteTodo={handleDeleteTodo}
-					handleCompleteTodo={handleCompleteTodo}
-				/>
+			<div>
+				<Routes>
+					<Route path='/' element={ <Navbar /> } >
+						<Route path='calender' element={ <Calander /> } />
+						<Route path='list' element={ <Lista /> } />
+						<Route path='*' element={ <Deafualt /> } />
+					</Route>
+				</Routes>
 			</div>
 		</>
 	);

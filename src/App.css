@@ -8,19 +8,48 @@
 }
 
 :root {
+  --naranja: #FBA834;
   --rojo: #ba181b;
   --azul: #333A73;
+  --azulClaro: #7cdcff;
   --azul-hover: #387ADF;
   --rojo-hover: #e5383b;
   --verde: #09a129;
 }
 
 body {
-  background-color: #50C4ED;
-  max-width: 1200px;
-  margin: 40px auto;
+  background-color: #b9ffbf;
+}
+
+.container{
   display: flex;
   justify-content: center;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li{
+  display: flex;
+  justify-content: center;
+  background-color: var(--azulClaro);
+  border-radius: 15px;
+}
+
+.navitem{
+  font-size: 35px;
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.active{
+  color: var(--naranja);
+  background-color: var(--azul);
+  border-radius: 15px;
 }
 
 .cardToDo {
@@ -46,7 +75,7 @@ h1 {
 }
 
 .counterToDos span {
-  color: #333A73;
+  color: var(--azul);
   font-weight: 700;
   font-size: 24px;
   margin-left: 10px;
