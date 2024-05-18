@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { FaTrash, FaEdit, FaCheck, FaSquare } from 'react-icons/fa';
 
 const MyCalendar = () => {
   const storedTasks = JSON.parse(localStorage.getItem('calendarTasks')) || [];
@@ -79,10 +80,10 @@ const MyCalendar = () => {
               <strong>{task.date}:</strong> {task.task}
             </div>
             <div>
-              <button className="edit-button" onClick={() => handleEditTask(task.id, task.task)}>Editar</button>
-              <button className="delete-button" onClick={() => handleDeleteTask(task.id)}>Eliminar</button>
+              <button className="edit-button" onClick={() => handleEditTask(task.id, task.task)}><FaEdit/></button>
+              <button className="delete-button" onClick={() => handleDeleteTask(task.id)}><FaTrash/></button>
               <button className="complete-button" onClick={() => handleCompleteTask(task.id)}>
-                {task.completed ? 'Descompletar' : 'Completar'}
+                {task.completed ? <FaSquare/> : <FaCheck/>}
               </button>
             </div>
           </li>

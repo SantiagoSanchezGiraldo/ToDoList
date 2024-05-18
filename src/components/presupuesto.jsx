@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { FaTrash } from 'react-icons/fa';
 const Presupuesto = () => {
   const [presupuestoInicial, setPresupuestoInicial] = useState('');
   const [presupuesto, setPresupuesto] = useState(() => {
@@ -59,9 +59,9 @@ const Presupuesto = () => {
             type="number"
             value={presupuestoInicial}
             onChange={(e) => setPresupuestoInicial(e.target.value)}
-            placeholder="Presupuesto Inicial Mensual"
+            placeholder="Presupuesto Inicial Mensual" className='plata'
           />
-          <button onClick={handleSetPresupuestoInicial}>Establecer Presupuesto</button>
+          <button className='establecer' onClick={handleSetPresupuestoInicial}>Establecer Presupuesto</button>
         </div>
       </div>
       <form className="gasto-form" onSubmit={handleAgregarGasto}>
@@ -75,7 +75,7 @@ const Presupuesto = () => {
           {gastos.map((gasto) => (
             <li key={gasto.id}>
               <span>{gasto.descripcion}: ${gasto.monto.toLocaleString()}</span>
-              <button onClick={() => handleEliminarGasto(gasto.id, gasto.monto)}>Eliminar</button>
+              <button onClick={() => handleEliminarGasto(gasto.id, gasto.monto)}><FaTrash/></button>
             </li>
           ))}
         </ul>
