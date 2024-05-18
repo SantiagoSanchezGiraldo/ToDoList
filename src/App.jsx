@@ -6,6 +6,7 @@ import { Lista } from './components/Lista';
 import { Deafualt } from "./components/Deafualt";
 import MyCalendar from './components/Calander'; 
 import Presupuesto from './components/presupuesto';
+import { Home } from './components/Home';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Navbar />}>
-            <Route path='calender' element={<MyCalendar />} />
+            <Route path='/' element={<Home />} />
             <Route path='list' element={<Lista />} />
+            <Route path='calender' element={<MyCalendar />} />
             <Route path='*' element={<Deafualt />} />
 			      <Route path='presupuesto' element={<Presupuesto />} /> 
           </Route>

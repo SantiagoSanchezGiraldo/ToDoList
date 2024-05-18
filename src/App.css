@@ -22,9 +22,15 @@ body {
   background-color: #b9ffbf;
 }
 
+.home p{
+  width: 75%;
+}
+
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 nav ul {
