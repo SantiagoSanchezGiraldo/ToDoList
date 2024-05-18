@@ -8,7 +8,7 @@ export const Navbar = () => {
                 <ul>
                     <li><NavLink className='navitem' to="/list">Lista</NavLink></li>
                     <li><NavLink className='navitem' to="/calender">Calendario</NavLink></li>
-                    <li><NavLink className='navitem' to="/otro">Otro</NavLink></li>
+                    <li><NavLink className='navitem' to="/presupuesto">Presupuesto</NavLink></li>
                     <li><NavLink className='navitem' to="/otra">Otra</NavLink></li>
                 </ul>
             </nav>

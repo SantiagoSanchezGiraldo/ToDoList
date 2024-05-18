@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Otro = () => {
+const Presupuesto = () => {
   const [presupuestoInicial, setPresupuestoInicial] = useState('');
   const [presupuesto, setPresupuesto] = useState(() => {
     const storedPresupuesto = localStorage.getItem('presupuesto');
@@ -84,4 +84,4 @@ const Otro = () => {
   );
 };
 
-export default Otro;
+export default Presupuesto;
