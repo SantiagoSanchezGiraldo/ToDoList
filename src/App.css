@@ -209,3 +209,169 @@ form {
 .btnAdd:hover {
   background-color: var(--azul-hover);
 }
+
+
+
+/*-------------CALENDARIO--------------------*/
+.my-calendar {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #7facb4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Añade este estilo para centrar el contenido */
+}
+
+.react-calendar {
+  margin: 0 auto;
+  max-width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 40px 40px 40px rgba(116, 138, 211, 0.1);
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #72b374;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notification {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Ajusta la alineación del texto en la lista de tareas */
+}
+
+.task-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list li.completed {
+  background-color: #e0e0e0;
+  text-decoration: line-through;
+}
+
+.edit-button,
+.delete-button,
+.complete-button {
+  padding: 6px 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.complete-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+
+
+
+/*-------------PRESUPUESTO--------------------*/
+
+.otro-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.otro-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.presupuesto-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.presupuesto-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.gasto-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.gasto-form input,
+.gasto-form button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gasto-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.gasto-form button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li span {
+  font-weight: bold;
+}
+
+

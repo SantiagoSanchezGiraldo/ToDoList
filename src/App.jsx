@@ -16,7 +16,7 @@ function App() {
             <Route path='calender' element={<MyCalendar />} />
             <Route path='list' element={<Lista />} />
             <Route path='*' element={<Deafualt />} />
-			<Route path="otro" element={<Otro />} /> 
+			      <Route path='otro' element={<Otro />} /> 
           </Route>
         </Routes>
       </div>

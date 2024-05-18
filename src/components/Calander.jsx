@@ -1,25 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './MyCalendar.css'; // Estilos CSS personalizados
 
 const MyCalendar = () => {
+  const storedTasks = JSON.parse(localStorage.getItem('calendarTasks')) || [];
   const [date, setDate] = useState(new Date());
   const [task, setTask] = useState('');
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(storedTasks);
   const [editTaskId, setEditTaskId] = useState(null);
   const [notification, setNotification] = useState('');
-
-  useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
 
   const handleDateChange = (newDate) => {
     setDate(newDate);
@@ -66,6 +55,10 @@ const MyCalendar = () => {
     setNotification('Tarea marcada como completada.');
     setTimeout(() => setNotification(''), 3000);
   };
+
+  useEffect(() => {
+    localStorage.setItem('calendarTasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <div className="my-calendar">
