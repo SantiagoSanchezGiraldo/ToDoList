@@ -59,6 +59,7 @@ nav ul li {
   border-radius: 15px;
 }
 
+/*-------------LISTA DE TAREAS--------------------*/
 .cardToDo {
   background-color: var(--naranjaClaro);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -202,7 +203,6 @@ input[type='number'] {
   padding: 10px 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   flex: 1;
-  font-family: inherit;
   font-size: 17px;
   color: var(--azul);
   background-color: white;
@@ -214,7 +214,6 @@ input[type='number'] {
   color: #fff;
   padding: 5px 40px;
   border-radius: 20px;
-  font-family: inherit;
   cursor: pointer;
   font-size: 17px;
   transition: all 0.3s;
@@ -251,7 +250,6 @@ input[type='number'] {
 
 
 .title {
-  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -278,7 +276,6 @@ input[type='number'] {
   list-style-type: none;
   padding: 0;
   text-align: left;
-  /* Ajusta la alineación del texto en la lista de tareas */
 }
 
 .task-list li {
@@ -339,7 +336,6 @@ input[type='number'] {
 
 
 /*-------------PRESUPUESTO--------------------*/
-
 .otro-container {
   max-width: 600px;
   margin: 0 auto;
@@ -350,7 +346,6 @@ input[type='number'] {
 }
 
 .otro-container h1 {
-  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -438,4 +433,94 @@ ul li span {
 
 .gastos-list button:hover {
   background-color: var(--rojo-hover);
+}
+
+/*-------------PRESTAMO--------------------*/
+.prestamos{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--naranjaClaro);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prestamos h1{
+  margin: 15px 0px;
+}
+
+.prestamos p{
+  font-size: 17px;
+}
+
+.cantidad, 
+.plazo, .prestamos form{
+  display: flex;
+  flex-direction: column;
+}
+
+.cantidad, 
+.plazo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0px  15px 0px 15px;
+}
+
+.cantidad input[type="number"],
+.plazo select{
+  width: 100%;
+}
+
+.plazo select{
+  border-radius: 10px;
+  color: var(--azul);
+  text-align: center;
+  font-size: 17px;
+  outline: none;
+  border: none;
+}
+
+.cantidad, .plazo label{
+  font-size: 18px;
+}
+
+.column{
+  display: flex;
+  flex-direction: row;
+}
+
+.btnSubmit{
+  display: flex;
+  justify-content: center;
+}
+
+.btnSubmit input[type="submit"] {
+  width: 60%;
+  padding: 6px 20px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: var(--azul);
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: all 0.3s;
+}
+
+.btnSubmit input[type="submit"]:hover {
+  background-color: var(--azul-hover);
+}
+
+.resultado{
+  background-color: var(--azul);
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.resultado h2{
+  text-align: center;
 }

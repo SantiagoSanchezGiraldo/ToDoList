@@ -30,7 +30,7 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				name='updateDescription'
 				value={updateDescription}
 				onChange={onInputChange}
-				placeholder='¿Qué hay que hacer?'
+				placeholder='¿Qué hay por hacer?'
 				readOnly={disabled}
 				ref={focusInputRef}/>
 			<button className='btnEdit' type='submit'><FaEdit /></button>
