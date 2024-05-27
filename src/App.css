@@ -19,11 +19,19 @@
 }
 
 body {
-  background-color: #b9ffbf;
+  background-size: 25%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87)),  url(assets/FondoLista.png);
+  background-position: center;
 }
-
+.defualt img{
+  width: 28%;
+}
 .home p{
-  width: 75%;
+  background-color: var(--naranjaClaro);
+  padding: 25px;
+  border-radius: 20px;
+  width: 80%;
+  font-size: 17px;
 }
 
 .container {
